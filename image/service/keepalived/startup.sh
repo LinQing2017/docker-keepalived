@@ -16,6 +16,9 @@ if [ ! -e "$FIRST_START_DONE" ]; then
   sed -i "s|{{ KEEPALIVED_INTERFACE }}|$KEEPALIVED_INTERFACE|g" ${CONTAINER_SERVICE_DIR}/keepalived/assets/keepalived.conf
   sed -i "s|{{ KEEPALIVED_PRIORITY }}|$KEEPALIVED_PRIORITY|g" ${CONTAINER_SERVICE_DIR}/keepalived/assets/keepalived.conf
   sed -i "s|{{ KEEPALIVED_PASSWORD }}|$KEEPALIVED_PASSWORD|g" ${CONTAINER_SERVICE_DIR}/keepalived/assets/keepalived.conf
+  sed -i "s|{{ KEEPALIVED_HOST_IP }}|$KEEPALIVED_HOST_IP|g" ${CONTAINER_SERVICE_DIR}/keepalived/assets/keepalived.conf
+  sed -i "s|{{ KEEPALIVED_HOST_PORT }}|$KEEPALIVED_HOST_PORT|g" ${CONTAINER_SERVICE_DIR}/keepalived/assets/keepalived.conf
+  sed -i "s|{{ KEEPALIVED_NOTIFY_DOWN }}|$KEEPALIVED_NOTIFY_DOWN|g" ${CONTAINER_SERVICE_DIR}/keepalived/assets/keepalived.conf
 
   if [ -n "$KEEPALIVED_NOTIFY" ]; then
     sed -i "s|{{ KEEPALIVED_NOTIFY }}|notify \"$KEEPALIVED_NOTIFY\"|g" ${CONTAINER_SERVICE_DIR}/keepalived/assets/keepalived.conf

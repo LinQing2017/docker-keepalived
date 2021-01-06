@@ -20,3 +20,5 @@ KEEPALIVED_NOTIFY: /container/service/keepalived/assets/notify.sh
 KEEPALIVED_ROUTER_ID: 51
 
 KEEPALIVED_STATE: BACKUP
+
+KEEPALIVED_NOTIFY_DOWN: /container/service/keepalived/assets/down.sh
