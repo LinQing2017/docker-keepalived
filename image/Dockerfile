@@ -51,5 +51,3 @@ RUN /container/tool/install-service
 
 # Add default env variables
 ADD environment /container/environment/99-default
-
-RUN chmod +x -R /container/service/keepalived
